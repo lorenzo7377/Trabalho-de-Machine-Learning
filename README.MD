@@ -16,4 +16,4 @@ Nosso projeto consiste na previsão de jogos da NBA (National Basketball Associa
 | <img src="https://avatars.githubusercontent.com/u/54644579?v=4" alt="Foto" style="width:150px"/> | Lorenzo | [lorenzo7377](https://github.com/lorenzo7377) |  |
 | <img src="https://avatars.githubusercontent.com/u/109092210?v=4" alt="Foto" style="width:150px"/> | Pedro Cabeceira | [pkbceira03](https://github.com/pkbceira03) | cabeceira2003@gmail.com |
 | <img src="https://avatars.githubusercontent.com/u/79025349?v=4" alt="Foto" style="width:150px"/> | Rafael Kenji | [rafa-kenji](https://github.com/rafa-kenji) |  |
-|  | Thiago |  |  |
+| <img src="https://avatars.githubusercontent.com/u/38543057?s=400&u=b63a8c896d6285576a3fd971345756973d72d665&v=4" alt="Foto" style="width:150px"> | Thiago | [Thiagof99](https://github.com/Thiagof99) | thiago3399@hotmail.com |
