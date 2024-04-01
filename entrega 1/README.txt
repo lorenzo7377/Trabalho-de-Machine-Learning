@@ -5,6 +5,7 @@ Membros:
 Lorenzo de Lima Alves dos Santos - 190032821
 Pedro Cabeceira de Freitas - 211043727
 Rafael Kenji Taira - 190044128
+Artur Jackson Leal Fontinele - 211030943
 Fause Carlos Mascarenhas Lustosa Junior - 211031691
 
 - Definição do problema: A partir dos dados de jogos da National Basketball Association (doravante chamada NBA), contando desde 2003 até a temporada 2021-2022, temos como objetivo conseguir prever o resultado de futuros jogos de todos os times, não se atentando a placar mas a qual time ganhou, de forma relativamente precisa.
