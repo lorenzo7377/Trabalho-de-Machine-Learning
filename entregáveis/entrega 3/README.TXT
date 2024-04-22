@@ -1,4 +1,4 @@
-MINI TRABALHO 3: Exploração dos dados
+MINI TRABALHO 2: Aquisição de dados
 equipe: 1
 
 Membros:
@@ -11,13 +11,6 @@ Thiago França Vale Oliveira - 170119429
 
 - Nossos dados foram coletados na plataforma kaggle (https://www.kaggle.com/datasets/nathanlauga/nba-games).
 
-- foram listados os seguintes x atributos distintos em todas as tabelas:
-
-
-
-
-
-
-
+- Os dados do nosso dataset foram obtidos na plataforma da NBA através de scripts coletados de jogos reais da NBA entre 2003 e 2022.
 
 - Como essas informação estão sendo tiradas de um site público, não existe entre eles dados sensíveis.
