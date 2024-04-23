@@ -1,4 +1,4 @@
-MINI TRABALHO 2: Aquisição de dados
+MINI TRABALHO 3: Exploração dos dados
 equipe: 1
 
 Membros:
@@ -10,10 +10,6 @@ Rafael Kenji Taira - 190044128
 Thiago França Vale Oliveira - 170119429
 
 - Nossos dados foram coletados na plataforma kaggle (https://www.kaggle.com/datasets/nathanlauga/nba-games).
-
-- Os dados do nosso dataset foram obtidos na plataforma da NBA através de scripts coletados de jogos reais da NBA entre 2003 e 2022.
-
-- Como essas informação estão sendo tiradas de um site público, não existe entre eles dados sensíveis.
 
 ## Engeharia de atributo
 
@@ -27,33 +23,35 @@ Não achamos necessário utilizar a normalização, pois nossos dados não tem u
 
 GAME_DATE_EST = A data em que o jogo ocorreu.
 GAME_ID = Número identificador do jogo
-GAME_STATUS_TEXT = O status atual do jogo (todos estão final ent acho q n vamos usar)
-HOME_TEAM_ID = Número identificado do time da casa
-VISITOR_TEAM_ID = Número identificado do time Visitante
-SEASON = A temporada específica em que o jogo foi disputado
+GAME_STATUS_TEXT = O status atual do jogo*
+HOME_TEAM_ID = Número identificador do time da casa
+VISITOR_TEAM_ID = Número identificador do time Visitante
+SEASON = A temporada específica em que o jogo foi disputado*
 PTS_home = O número de pontos marcados pelo time da casa durante o jogo.
 FG_PCT_home = A porcentagem de arremessos de campo convertidos pelo time da casa
 FT_PCT_home = A porcentagem de lances livres convertidos pelo time da casa
 TEAM_ID = Número identificador do time
-TEAM_ABBREVIATION =  A abreviação ou sigla oficial do time
-TEAM_CITY = A cidade de origem do time
-PLAYER_NAME = O nome completo do jogador
-NICKNAME = O apelido ou nome mais curto do jogador
-START_POSITION = A posição inicial do jogador no início do jogo; se estiver vazio, indica que o jogador começou no banco de reservas
-COMMENT = comentários
+TEAM_ABBREVIATION =  A abreviação ou sigla oficial do time*
+TEAM_CITY = A cidade de origem do time*
+PLAYER_NAME = O nome completo do jogador*
+NICKNAME = O apelido ou nome mais curto do jogador*
+START_POSITION = A posição inicial do jogador no início do jogo; se estiver vazio, indica que o jogador começou no banco de reservas*
+COMMENT = comentários*
 MIN = Os minutos jogados pelo jogador em uma partida específica.
-PLAYER_ID =Número identificado do jogador
-LEAGUE_ID = Número identificado da liga (todos estão com vallor 00 então não devemos usar) 
-SEASON_ID = Número identificado da temporada
-STANDINGSDATE =  data em que a classificação foi registrada
+PLAYER_ID = Número identificador do jogador
+LEAGUE_ID = Número identificador da liga* 
+SEASON_ID = Número identificador da temporada
+STANDINGSDATE =  data em que a classificação foi registrada*
 CONFERENCE = Conferencia (apenas dois valores possíveis Leste ou Oeste)
-TEAM = O nome completo da equipe
+TEAM = O nome completo da equipe*
 G = O número total de jogos jogados pela equipe na temporada
 W = O número total de vitórias da equipe na temporada
 L = O número total de derrotas da equipe na temporada.
 W_PCT = A porcentagem de vitórias da equipe na temporada
-MIN_YEAR = O ano em que a equipe começou a participar do campeonato da NBA
-MAX_YEAR = O ano mais recente em que a equipe participou do campeonato da NBA
-YEARFOUNDED = O ano de fundação da equipe.
-ARENA = O nome do estádio onde a equipe joga.
-ARENACAPACITY = A capacidade do estádio onde a equipe joga.
+MIN_YEAR = O ano em que a equipe começou a participar do campeonato da NBA*
+MAX_YEAR = O ano mais recente em que a equipe participou do campeonato da NBA*
+YEARFOUNDED = O ano de fundação da equipe. *
+ARENA = O nome do estádio onde a equipe joga.*
+ARENACAPACITY = A capacidade do estádio onde a equipe joga.*
+
+* Atributos marcados com este símbolo foram considerados pela equipe desimportantes para a previsão de resultados
