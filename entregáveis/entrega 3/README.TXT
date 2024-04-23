@@ -57,7 +57,6 @@ MAX_YEAR = O ano mais recente em que a equipe participou do campeonato da NBA*
 YEARFOUNDED = O ano de fundação da equipe. *
 ARENA = O nome do estádio onde a equipe joga.*
 ARENACAPACITY = A capacidade do estádio onde a equipe joga.*
-
 AST_home = Assistências feitas pelo time da casa durante o jogo.
 REB_home = Rebotes conquistados pelo time da casa durante o jogo.
 FG3_PCT_home = Porcentagem de cestas de 3 pontos convertidas pelo time da casa durante o jogo.
@@ -87,13 +86,13 @@ TO = Número total de turnovers (reversões) cometidos pelo jogador durante o jo
 PF = Número total de faltas individuais cometidas pelo jogador durante o jogo.
 PTS = Número total de pontos marcados pelo jogador durante o jogo.
 PLUS_MINUS = Estatística que indica a diferença entre pontos marcados pela equipe quando o jogador está em quadra e os pontos sofridos pela equipe quando o jogador está em quadra.
-HOME_RECORD = O histórico de vitórias e derrotas do time da casa na temporada até o momento do jogo.
-ROAD_RECORD = O histórico de vitórias e derrotas do time visitante na temporada até o momento do jogo.
-RETURNTOPLAY = Este atributo parece não conter informações relevantes para análises, pois está vazio (NULL).
-OWNER = O proprietário ou proprietários do time.
-GENERALMANAGER = O Diretor Geral da equipe.
-HEADCOACH = O treinador principal da equipe.
-DLEAGUEAFFILIATION = A filiação da equipe à Liga de Desenvolvimento da NBA (NBA G League), se aplicável.
+HOME_RECORD = O histórico de vitórias e derrotas do time da casa na temporada até o momento do jogo.*
+ROAD_RECORD = O histórico de vitórias e derrotas do time visitante na temporada até o momento do jogo.*
+RETURNTOPLAY = Este atributo parece não conter informações relevantes para análises, pois está vazio (NULL).*
+OWNER = O proprietário ou proprietários do time.*
+GENERALMANAGER = O Diretor Geral da equipe.*
+HEADCOACH = O treinador principal da equipe.*
+DLEAGUEAFFILIATION = A filiação da equipe à Liga de Desenvolvimento da NBA (NBA G League), se aplicável.*
 
 * Atributos marcados com este símbolo foram considerados pela equipe desimportantes para a previsão de resultados
 
@@ -102,4 +101,5 @@ DLEAGUEAFFILIATION = A filiação da equipe à Liga de Desenvolvimento da NBA (N
 - Um exemplo de como os dados se manifestam no dataset seria:
 O jogo de ID 22200468 foi disputado no dia 21/12/2022, entre os times de ID 1610612737 (time da casa) e 1610612741 (time visitante). O placar ficou 108 a 110.
 A porcentagem de arremessos convertidos foi de 50% para o visitante e 43% do time da casa.
-Em um jogo, o time da casa teve 100% e o time visitante teve 77% de aproveitamento de lances livres. Isso poderia ser considerado uma anomalia se fosse considerar apenas os lances livres.
+Em um jogo, o time da casa teve 100% e o time visitante teve 77% de aproveitamento de lances livres. Isso poderia ser considerado uma anomalia caso analisarmos apenas os lances livres,
+mas o resultado da partida é influênciado por mais atributos, logo essa análise seria imcopleta.
