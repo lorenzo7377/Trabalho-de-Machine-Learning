@@ -59,3 +59,9 @@ ARENA = O nome do estádio onde a equipe joga.*
 ARENACAPACITY = A capacidade do estádio onde a equipe joga.*
 
 * Atributos marcados com este símbolo foram considerados pela equipe desimportantes para a previsão de resultados
+
+- É importante destacar que a tabela "players.csv" será mantida mas não utilizada como parte dos dados, mas apenas como listagem dos nomes e IDs de jogadores
+
+- Um exemplo de como os dados se manifestam no dataset seria:
+O jogo de ID 22200468 foi disputado no dia 21/12/2022, entre os times de ID 1610612737 (time da casa) e 1610612741 (time visitante). O placar ficou 108 a 110.
+A porcentagem de arremessos convertidos foi de 50% para o visitante e 43% do time da casa.
