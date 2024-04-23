@@ -11,13 +11,17 @@ Thiago França Vale Oliveira - 170119429
 
 - Nossos dados foram coletados na plataforma kaggle (https://www.kaggle.com/datasets/nathanlauga/nba-games).
 
-## Engeharia de atributo
+## Engenharia de atributo
 
 Nós utilizamos a engenharia de atributos (feature engineering) para separar os dados da nossa base de dados e deixar ela o mais limpa e apenas com os dados que serão necessários para a nossa análise. Conseguimos excluir uma coluna de status dos jogos, pois todos já acabaram e a coluna de id da liga, pois todos os jogos são da NBA, logo ela não agrega em nada.
 
 ## Normalização
 
 Não achamos necessário utilizar a normalização, pois nossos dados não tem uma distância muito grande, eles variam de 0 até 150, independente da sua estatística, por exemplo, só vamos chegar perto de 100 quando é a pontuação de um jogo, mas a pontuação individuais não passam de 70 e os rebotes e assistências não passam de 20.
+
+## Análise detalhada de Atributos
+
+Para evitar cometer erros ao utilizar dados de forma equivocada no projeto de aprendizagem de máquina, realizamos uma reunião onde fizemos uma análise detalhada para definir quais atributos seriam os mais eficazes e quais não seriam úteis. Isso foi feito com o objetivo de minimizar erros de variância, ruído e viés(Bias).
 
 ## Os Atributos presentes no nosso Data Set são:
 
