@@ -65,3 +65,4 @@ ARENACAPACITY = A capacidade do estádio onde a equipe joga.*
 - Um exemplo de como os dados se manifestam no dataset seria:
 O jogo de ID 22200468 foi disputado no dia 21/12/2022, entre os times de ID 1610612737 (time da casa) e 1610612741 (time visitante). O placar ficou 108 a 110.
 A porcentagem de arremessos convertidos foi de 50% para o visitante e 43% do time da casa.
+Em um jogo, o time da casa teve 100% e o time visitante teve 77% de aproveitamento de lances livres. Isso poderia ser considerado uma anomalia se fosse considerar apenas os lances livres.
