@@ -58,6 +58,43 @@ YEARFOUNDED = O ano de fundação da equipe. *
 ARENA = O nome do estádio onde a equipe joga.*
 ARENACAPACITY = A capacidade do estádio onde a equipe joga.*
 
+AST_home = Assistências feitas pelo time da casa durante o jogo.
+REB_home = Rebotes conquistados pelo time da casa durante o jogo.
+FG3_PCT_home = Porcentagem de cestas de 3 pontos convertidas pelo time da casa durante o jogo.
+PTS_AWAY = Número de pontos marcados pelo time visitante durante o jogo.
+FG_PCT_AWAY = Porcentagem de arremessos de campo convertidos pelo time visitante durante o jogo.
+FT_PCT_AWAY = Porcentagem de lances livres convertidos pelo time visitante durante o jogo.
+AST_away = Assistências feitas pelo time visitante durante o jogo.
+REB_away = Rebotes conquistados pelo time visitante durante o jogo.
+FG3_PCT_away = Porcentagem de cestas de 3 pontos convertidas pelo time visitante durante o jogo.
+HOME_TEAM_WINS = Indica se o time da casa venceu o jogo, com valor binário 0 (se o time visitante venceu) ou 1 (se o time da casa venceu).
+FGM = Número total de arremessos bem-sucedidos durante o jogo.
+FGA = Número total de tentativas de arremesso durante o jogo.
+FG_PCT = Porcentagem de arremessos convertidos durante o jogo.
+FG3M = Número total de cestas de três pontos bem-sucedidas durante o jogo.
+FG3A = Número total de tentativas de cesta de três pontos durante o jogo.
+FG3_PCT = Porcentagem de cestas de três pontos convertidas durante o jogo.
+FTM = Número total de lances livres bem-sucedidos durante o jogo.
+FTA = Número total de tentativas de lance livre durante o jogo.
+FT_PCT = Porcentagem de lances livres convertidos durante o jogo.
+OREB = Número total de rebotes ofensivos capturados durante o jogo.
+DREB = Número total de rebotes defensivos capturados pelo jogador durante o jogo.
+REB = Número total de rebotes, incluindo rebotes defensivos e ofensivos, capturados pelo jogador durante o jogo.
+AST = Número total de assistências realizadas pelo jogador durante o jogo.
+STL = Número total de roubos de bola realizados pelo jogador durante o jogo.
+BLK = Número total de bloqueios realizados pelo jogador durante o jogo.
+TO = Número total de turnovers (reversões) cometidos pelo jogador durante o jogo.
+PF = Número total de faltas individuais cometidas pelo jogador durante o jogo.
+PTS = Número total de pontos marcados pelo jogador durante o jogo.
+PLUS_MINUS = Estatística que indica a diferença entre pontos marcados pela equipe quando o jogador está em quadra e os pontos sofridos pela equipe quando o jogador está em quadra.
+HOME_RECORD = O histórico de vitórias e derrotas do time da casa na temporada até o momento do jogo.
+ROAD_RECORD = O histórico de vitórias e derrotas do time visitante na temporada até o momento do jogo.
+RETURNTOPLAY = Este atributo parece não conter informações relevantes para análises, pois está vazio (NULL).
+OWNER = O proprietário ou proprietários do time.
+GENERALMANAGER = O Diretor Geral da equipe.
+HEADCOACH = O treinador principal da equipe.
+DLEAGUEAFFILIATION = A filiação da equipe à Liga de Desenvolvimento da NBA (NBA G League), se aplicável.
+
 * Atributos marcados com este símbolo foram considerados pela equipe desimportantes para a previsão de resultados
 
 - É importante destacar que a tabela "players.csv" será mantida mas não utilizada como parte dos dados, mas apenas como listagem dos nomes e IDs de jogadores
