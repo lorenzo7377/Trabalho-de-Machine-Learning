@@ -1,4 +1,4 @@
-MINI TRABALHO 4: 
+MINI TRABALHO 4: Preparação dos dados
 equipe: 1
 
 Membros:
