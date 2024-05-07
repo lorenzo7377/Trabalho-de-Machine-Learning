@@ -36,7 +36,7 @@ Se o resultado da previsão for 0 significa que o time visitante ganhou. Se for 
     -|15	114|
 
     -Foram 83 verdadeiros positivos, 34 falsos positivos, 15 falsos negativos e 114 verdadeiros negativos.
-    -Também tivemos outras métricas como f1-score e o recall que estão demonstradas nas imagens acima. Onde o f1-score do time da casa perder foi 0.77 e do time da casa vencer foi de 0.82. Já o recall para a derrota do time da casa foi de 0.71 e para vitória foi de 0.88.
+    -Também tivemos outras métricas como f1-score e o recall que estão demonstradas na imagem anexada. Onde o f1-score do time da casa perder foi 0.77 e do time da casa vencer foi de 0.82. Já o recall para a derrota do time da casa foi de 0.71 e para vitória foi de 0.88.
 
 
 O modelo mostra ser mais confiável em prever derrotas do time da casa do que suas vitórias, possivelmente devido a características mais distintas ou consistentes quando o time da casa perde comparado a quando ganha.
