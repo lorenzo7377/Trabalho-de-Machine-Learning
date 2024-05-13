@@ -1,5 +1,5 @@
 import pandas as pd
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.linear_model import LogisticRegression
 from sklearn import metrics
 from sklearn.metrics import classification_report, confusion_matrix
@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('./databasejogos.csv')
 
 features = [
-    'PTS_home','FG_PCT_home', 'FT_PCT_home', 'FG3_PCT_home', 'AST_home', 'REB_home',
-    'PTS_away','FG_PCT_away', 'FT_PCT_away', 'FG3_PCT_away', 'AST_away', 'REB_away'
+    'FG_PCT_home', 'FT_PCT_home', 'FG3_PCT_home', 'AST_home', 'REB_home',
+    'FG_PCT_away', 'FT_PCT_away', 'FG3_PCT_away', 'AST_away', 'REB_away'
 ]
 target = 'HOME_TEAM_WINS'
 
@@ -22,7 +22,7 @@ logistic_model = LogisticRegression()
 logistic_model.fit(X_train, y_train)
 y_pred = logistic_model.predict(X_test)
 
-print('porcentagem ', metrics.accuracy_score(y_test, y_pred))
+print('Porcentagem de acertos:', metrics.accuracy_score(y_test, y_pred))
 
 predictions = logistic_model.predict(X_test)
 print("Classification Report:")
@@ -37,23 +37,23 @@ time_visitante = 1610612751
 df_time = df[df['HOME_TEAM_ID'] == time_desejado].copy()
 
 # Filtragem dos dados para o time desejado (time visitante)
-df_time_visitante = df[df['VISITOR_TEAM_ID'] == time_desejado].copy()
+df_time_visitante = df[df['VISITOR_TEAM_ID'] == time_visitante].copy()
 
 # Tratamento de valores ausentes para o time da casa
-df_time.loc[:, 'PTS_home'].fillna(0, inplace=True)
-df_time.loc[:, 'FG_PCT_home'].fillna(0, inplace=True)
-df_time.loc[:, 'FT_PCT_home'].fillna(0, inplace=True)
-df_time.loc[:, 'FG3_PCT_home'].fillna(0, inplace=True)
-df_time.loc[:, 'AST_home'].fillna(0, inplace=True)
-df_time.loc[:, 'REB_home'].fillna(0, inplace=True)
+df_time['PTS_home'].fillna(0, inplace=True)
+df_time['FG_PCT_home'].fillna(0, inplace=True)
+df_time['FT_PCT_home'].fillna(0, inplace=True)
+df_time['FG3_PCT_home'].fillna(0, inplace=True)
+df_time['AST_home'].fillna(0, inplace=True)
+df_time['REB_home'].fillna(0, inplace=True)
 
 # Tratamento de valores ausentes para o time visitante
-df_time_visitante.loc[:, 'PTS_away'].fillna(0, inplace=True)
-df_time_visitante.loc[:, 'FG_PCT_away'].fillna(0, inplace=True)
-df_time_visitante.loc[:, 'FT_PCT_away'].fillna(0, inplace=True)
-df_time_visitante.loc[:, 'FG3_PCT_away'].fillna(0, inplace=True)
-df_time_visitante.loc[:, 'AST_away'].fillna(0, inplace=True)
-df_time_visitante.loc[:, 'REB_away'].fillna(0, inplace=True)
+df_time_visitante['PTS_away'].fillna(0, inplace=True)
+df_time_visitante['FG_PCT_away'].fillna(0, inplace=True)
+df_time_visitante['FT_PCT_away'].fillna(0, inplace=True)
+df_time_visitante['FG3_PCT_away'].fillna(0, inplace=True)
+df_time_visitante['AST_away'].fillna(0, inplace=True)
+df_time_visitante['REB_away'].fillna(0, inplace=True)
 
 # Cálculo das médias para o time da casa
 media_pontos_casa = df_time['PTS_home'].mean()
@@ -87,20 +87,21 @@ print("Média AST_away do time visitante:", media_ast_visitante)
 print("Média REB_away do time visitante:", media_reb_visitante)
 
 teste_vencedor = { 
-    'PTS_home':media_pontos_casa,'FG_PCT_home':media_fgpct_casa, 'FT_PCT_home':media_ftpct_casa, 'FG3_PCT_home':media_fg3_casa, 'AST_home':media_ast_casa, 'REB_home':media_reb_casa,
-    'PTS_away': media_pontos_visitante,'FG_PCT_away':media_fgpct_visitante, 'FT_PCT_away':media_ftpct_visitante, 'FG3_PCT_away':media_fg3_visitante, 'AST_away':media_ast_visitante, 'REB_away':media_reb_visitante
+    'FG_PCT_home':media_fgpct_casa,'FT_PCT_home': media_ftpct_casa, 'FG3_PCT_home': media_fg3_casa, 'AST_home': media_ast_casa, 'REB_home': media_reb_casa,
+    'FG_PCT_away':media_fgpct_visitante,'FT_PCT_away': media_ftpct_visitante, 'FG3_PCT_away': media_fg3_visitante, 'AST_away': media_ast_visitante, 'REB_away': media_reb_visitante
 }
 
-dft = pd.DataFrame(data = teste_vencedor, index=[0])
+dft = pd.DataFrame(data=teste_vencedor, index=[0])
 
 print(dft)
 
 resultado = logistic_model.predict(dft)
-resultado2 = logistic_model.predict_proba(dft)
 
 if (resultado == 0):
-    print("Time da visitante venceu")
+    print("\n||||||||||||||||||||||Time da visitante venceu||||||||||||||||||||||\n")
 else:
-    print("Time da casa venceu")
+    print("\n||||||||||||||||||||||Time da casa venceu||||||||||||||||||||||\n")
 
-print(resultado2)
+cv_scores = cross_val_score(logistic_model, X, y, cv=5)
+print('Acurácia (Validação Cruzada):', cv_scores)
+print('Acurácia Média (Validação Cruzada):', cv_scores.mean())
