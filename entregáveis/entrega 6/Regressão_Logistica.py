@@ -98,10 +98,10 @@ print(dft)
 resultado = logistic_model.predict(dft)
 
 if (resultado == 0):
-    print("\n||||||||||||||||||||||Time da visitante venceu||||||||||||||||||||||\n")
+    print("\n||||||||||||||||||||||\nTime da visitante venceu\n||||||||||||||||||||||\n")
 else:
-    print("\n||||||||||||||||||||||Time da casa venceu||||||||||||||||||||||\n")
+    print("\n||||||||||||||||||||||\nTime da casa venceu\n||||||||||||||||||||||\n")
 
-cv_scores = cross_val_score(logistic_model, X, y, cv=5)
+cv_scores = cross_val_score(logistic_model, X_train, y_train, cv=5)
 print('Acurácia (Validação Cruzada):', cv_scores)
 print('Acurácia Média (Validação Cruzada):', cv_scores.mean())
