@@ -5,8 +5,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
 
 # Carregar os dados
-data_path = './databasejogos.csv'
-data_path2 = './databasejogosPO.csv'
+data_path = './TPnormal/2003_2004.csv'
+data_path2 = './Playoff/2003_2004.csv'
 data = pd.read_csv(data_path)
 data2 = pd.read_csv(data_path2)
 
