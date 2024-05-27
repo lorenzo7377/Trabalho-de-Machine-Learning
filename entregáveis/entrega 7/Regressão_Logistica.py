@@ -54,11 +54,11 @@ for idx, year in enumerate(range(2003, 2022)):
 
     # Plotagem do gráfico
     plt.subplot(4, 5, idx+1)
-    plt.scatter(X_test['FT_PCT_away'], y_test, c=y_pred, cmap='coolwarm', marker='o', edgecolor='k', s=100)
-    plt.title(f'FT_PCT_away vs. {target}')
-    plt.xlabel('FT_PCT_away')
+    plt.scatter(X_test['FG_PCT_away'], y_test, c=y_pred, cmap='coolwarm', marker='o', edgecolor='k', s=100)
+    plt.title(f'{year}/{year+1}')
+    plt.xlabel('FG_PCT_away')
     plt.ylabel(target)
-    plt.colorbar(label='Classificação Prevista')
+    plt.colorbar()
 
 # Ajustando a aparência da janela
 plt.tight_layout()
