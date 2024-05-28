@@ -3,6 +3,8 @@ import numpy as np
 from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
+import matplotlib.pyplot as plt
+plt.figure(figsize=(20, 16))  # Aumentar o tamanho da figura
 
 # Carregar os dados
 for idx, year in enumerate(range(2003, 2022)):
@@ -50,6 +52,7 @@ for idx, year in enumerate(range(2003, 2022)):
 
     # Fazer previsões e avaliar o modelo
     predictions = random_forest_model.predict(x_test)
+
     print("Classification Report:")
     print(classification_report(y_test, predictions))
     print("Confusion Matrix:")
@@ -61,9 +64,20 @@ for idx, year in enumerate(range(2003, 2022)):
                                     columns=['importance']).sort_values('importance', ascending=False)
     print("Feature Importances:")
     print(feature_importances)
-
+    
     # Validar o modelo usando validação cruzada
     cv_scores = cross_val_score(random_forest_model, x_train, y_train, cv=5, scoring='accuracy')
     print("Cross-Validation Scores:", cv_scores)
     print("Mean CV Score:", cv_scores.mean())
-    print('\n')
+
+    plt.subplot(4, 5, idx + 1)
+    plt.scatter(x_test['FG_PCT_away'], y_test, c=predictions, cmap='coolwarm', marker='o', edgecolor='k', s=50)
+    plt.title(f'{year}/{year + 1}', fontsize=12)  # Ajustar o tamanho da fonte do título
+    plt.xlabel('FG_PCT_away', fontsize=10)  # Ajustar o tamanho da fonte do rótulo x
+    plt.ylabel(target, fontsize=10)  # Ajustar o tamanho da fonte do rótulo y
+    plt.colorbar()
+
+plt.tight_layout(pad=5.0)  # Aumentar ainda mais o espaçamento entre os subplots
+plt.show()
+
+
